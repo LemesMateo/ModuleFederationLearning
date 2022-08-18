@@ -3,6 +3,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 1rem;
+  width: 800px;
+  margin: auto;
+  padding: 1rem;
 }
 .carousel img {
   width: 100%;

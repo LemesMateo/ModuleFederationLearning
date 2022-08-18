@@ -53,7 +53,9 @@ module.exports = {
       },
       exposes: {
         './Header': './src/Header.vue',
-        './mountHeader': './src/mountHeader'
+        './HomeInfo': './src/HomeInfo.vue',
+        './mountHeader': './src/mountHeader',
+        './mountHomeInfo': './src/mountHomeInfo',
       },
       shared: require("./package.json").dependencies,
     }),

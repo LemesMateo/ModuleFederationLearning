@@ -43,7 +43,8 @@ module.exports = {
       name: "starter",
       filename: "remoteEntry.js",
       remotes: {
-        home: 'home@http://localhost:8080/remoteEntry.js'
+        home: 'home@http://localhost:8080/remoteEntry.js',
+        dogDetail: 'dogDetail@http://localhost:8081/remoteEntry.js'
       },
       exposes: {},
       shared: {

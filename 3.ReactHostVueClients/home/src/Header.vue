@@ -5,6 +5,9 @@ header {
   font-size: xx-large;
   font-weight: bold;
   text-align: center;
+  width: 800px;
+  margin: auto;
+  padding: 1rem;
 }
 </style>
 

@@ -52,7 +52,8 @@ module.exports = {
         home: 'home@http://localhost:8080/remoteEntry.js'
       },
       exposes: {
-        './Carousel': './src/Carousel.vue'
+        './Carousel': './src/Carousel.vue',
+        './mountCarousel': './src/mountCarousel',
       },
       shared: require("./package.json").dependencies,
     }),

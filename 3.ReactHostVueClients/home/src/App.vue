@@ -17,11 +17,7 @@
 <template>
 <div class="container">
   <Header />
-  <h1>Great Dogs Deserve Great Homes</h1>
-  <p>We are an adoption agency committed to putting wonderful adoptable dogs
-  into great permanent homes...</p>
-
-  <h1>Adoptable Dogs</h1>
+  <HomeInfo/>  
   <Carousel />
 </div>
 </template>
@@ -29,11 +25,13 @@
 <script>
 import Header from './Header.vue';
 import Carousel from 'dogDetail/Carousel';
+import HomeInfo from './HomeInfo.vue';
 
 export default {
   components: {
     Header,
     Carousel,
-  }
+    HomeInfo
+}
 }
 </script>
