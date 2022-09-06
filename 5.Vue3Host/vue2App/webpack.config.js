@@ -4,11 +4,11 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const deps = require("./package.json").dependencies;
 module.exports = {
   output: {
-    publicPath: "http://localhost:8080/",
+    publicPath: "http://localhost:8081/",
   },
 
   devServer: {
-    port: 8080,
+    port: 8081,
     historyApiFallback: true,
   },
 
@@ -41,26 +41,19 @@ module.exports = {
   
   plugins: [
     new ModuleFederationPlugin({
-      name: "host",
+      name: "vue2App",
       filename: "remoteEntry.js",
       remotes: {
-        host: 'host@http://localhost:8080/remoteEntry.js' , 
-        reactApp: 'reactApp@http://localhost:8081/remoteEntry.js',
-        vue3App: 'vue3App@http://localhost:8082/remoteEntry.js',
+        vue3host:'vue3host@http://localhost:8080/remoteEntry.js',
+        vue2App:'vue2App@http://localhost:8081/remoteEntry.js',
+        reactApp:'reactApp@http://localhost:8082/remoteEntry.js',
+        vue3App: 'vue3App@http://localhost:8083/remoteEntry.js',
       },
       exposes: {
         './Feature': './src/Feature.vue',
-        './mountFeature': './src/mountFeature',
-        './mountNavbar': './src/mountNavbar',
+        './vue2': './node_modules/vue/dist/vue',
       },
-      shared: {
-        ...deps,
-        vue: {
-          singleton: true,
-          eager: true,
-          version: deps.vue,
-        },
-      },
+      shared: require("./package.json").dependencies,
     }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",

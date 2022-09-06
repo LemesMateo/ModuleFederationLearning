@@ -5,18 +5,7 @@
     <div>Language: JavaScript</div>
     <div>CSS: Tailwind</div>
   </div>
-  
-  <Footer/>
 </template>
-
 <script>
-  import Footer from './Footer.vue'
-  //import Feature from 'host/Feature.vue'
-  //import mountNavbar from 'host/mountNavbar';
   
-  export default {
-    components: {
-      Footer
-    }
-  }
 </script>
