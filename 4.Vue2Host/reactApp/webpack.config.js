@@ -52,17 +52,7 @@ module.exports = {
         './Navbar':'./src/Navbar.jsx',
         './navbarWrapper': './src/navbarWrapper',
       },
-      shared: {
-        ...deps,
-        react: {
-          singleton: true,
-          requiredVersion: deps.react,
-        },
-        "react-dom": {
-          singleton: true,
-          requiredVersion: deps["react-dom"],
-        },
-      },
+      shared: require("./package.json").dependencies,
     }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",

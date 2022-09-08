@@ -29,7 +29,7 @@ export default function Navbar() {
         <div className="hidden sm:ml-6 sm:block">
           <div className="flex space-x-4">
      
-            <a href="#" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Dashboard</a>
+            <a href="#" className="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">ReactApp</a>
 
             <a href="/team" className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Team</a>
 
@@ -53,7 +53,7 @@ export default function Navbar() {
   <div className="sm:hidden" id="mobile-menu">
     <div className="space-y-1 px-2 pt-2 pb-3">
    
-      <a href="#" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">Dashboard</a>
+      <a href="#" className="bg-gray-900 text-white block px-3 py-2 rounded-md text-base font-medium" aria-current="page">ReactApp</a>
 
       <a href="/team" className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Team</a>
 

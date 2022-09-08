@@ -1,5 +1,6 @@
 import Home from "./views/Home.vue";
-import Team from "vue3App/Team";
+import VistaEjemplo from "./views/VistaEjemplo.vue"
+import Doc from "./views/Doc.vue"
 export default [
     {
         path: "/",
@@ -7,8 +8,12 @@ export default [
         name: 'home'
       },
       {
-        path: "/team",
-        component: Team,
-        name: 'team'
-      }
+        path: "/vistaejemplo",
+        component: VistaEjemplo,
+      },
+      {
+        path: '/doc/:casoDeUso',
+        component: Doc,
+        props: true,
+      },
 ];

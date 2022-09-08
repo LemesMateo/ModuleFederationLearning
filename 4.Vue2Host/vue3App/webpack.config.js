@@ -58,6 +58,7 @@ module.exports = {
         './mountFooter': './src/mountFooter',
         './Team': './src/views/Team.vue',
         './Ejemplo': './src/components/Ejemplo.vue',
+        './mountTeam': './src/views/mountTeam',
       },
       shared: require("./package.json").dependencies,
     }),

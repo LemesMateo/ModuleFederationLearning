@@ -52,15 +52,9 @@ module.exports = {
         './Feature': './src/Feature.vue',
         './mountFeature': './src/mountFeature',
         './mountNavbar': './src/mountNavbar',
+        './vue2': './node_modules/vue/dist/vue',
       },
-      shared: {
-        ...deps,
-        vue: {
-          singleton: true,
-          eager: true,
-          version: deps.vue,
-        },
-      },
+      shared: require("./package.json").dependencies,
     }),
     new HtmlWebPackPlugin({
       template: "./src/index.html",

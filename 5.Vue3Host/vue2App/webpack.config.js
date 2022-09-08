@@ -52,6 +52,8 @@ module.exports = {
       exposes: {
         './Feature': './src/Feature.vue',
         './vue2': './node_modules/vue/dist/vue',
+        './AboutPage': './src/views/AboutPage.vue',
+        './routes': './src/routes',
       },
       shared: require("./package.json").dependencies,
     }),

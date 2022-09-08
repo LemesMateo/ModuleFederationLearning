@@ -1,9 +1,8 @@
 <template>
   <div>
     <div id="navbar"></div>
-    
-    <router-link to="/">Home</router-link>
-    <router-link to="/team">Team</router-link>
+    <router-link class="text-3xl font-bold text-indigo-600 m-2 border-2 border-gray-800 box-border" to="/">Home</router-link>
+    <router-link class="text-3xl font-bold text-indigo-600 m-2 border-2 border-gray-800 box-border" to="/vistaejemplo">Vista Ejemplo</router-link>
     <router-view></router-view>
     <Ejemplo/>
     <h2>Algo</h2>
