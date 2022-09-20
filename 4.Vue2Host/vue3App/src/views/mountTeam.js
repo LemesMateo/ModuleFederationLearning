@@ -1,6 +1,6 @@
 import {createApp} from "vue";
-import Team from "./Team.vue"
+import team from "./team.vue"
 
 export default (selector) => {
-    createApp(Team).mount(selector);
+    createApp(team).mount(selector);
 };

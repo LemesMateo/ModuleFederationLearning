@@ -51,7 +51,6 @@ module.exports = {
       exposes: {
         './Feature': './src/Feature.vue',
         './mountFeature': './src/mountFeature',
-        './mountNavbar': './src/mountNavbar',
         './vue2': './node_modules/vue/dist/vue',
       },
       shared: require("./package.json").dependencies,

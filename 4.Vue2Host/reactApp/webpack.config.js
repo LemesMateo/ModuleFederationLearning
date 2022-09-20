@@ -51,6 +51,9 @@ module.exports = {
       exposes: {
         './Navbar':'./src/Navbar.jsx',
         './navbarWrapper': './src/navbarWrapper',
+        './reactcard': './src/views/reactcard.jsx',
+        './mountCard': './src/views/mountCard',
+        './mountReact':'./src/mountReact',
       },
       shared: require("./package.json").dependencies,
     }),

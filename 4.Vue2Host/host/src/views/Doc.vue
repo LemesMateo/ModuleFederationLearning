@@ -1,16 +1,24 @@
 <template>
 	<div id="target">
-
 	</div>
 </template>
 <script>
-	import mountTeam from 'vue3App/mountTeam';
+	import mountVue3 from 'vue3App/mountVue3';
+	import mountReact from 'reactApp/mountReact';
 	import { vue2ToVue3 } from '../utils';
-	import Team from 'vue3App/Team';
+	
 export default {
 	data() {
 		return {
 			currentView: null,
+			calls: {
+				fnVue(target, componentName){
+					mountVue3('#' + target, componentName);
+				},
+				fnReact(target, componentName){
+					mountReact(target, componentName);
+				}
+			}
 		};
 	},
 	computed: {
@@ -23,13 +31,19 @@ export default {
 	methods: {
 		newView(component) {
 			var vm = this;
-			if (component.toLowerCase() == 'team')
-			{
-				mountTeam('#target');
+			try{
+				if (component.substring(0,5) == 'react') {
+					vm.calls.fnReact('target', component);
+				}
+				else {
+					vm.calls.fnVue('target', component);
+				}
 			}
-			else {
+			catch {
 				vm.$router.push('/')
 			}
+			
+			
 		}
 	},
 	mounted(){

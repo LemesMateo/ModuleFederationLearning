@@ -56,9 +56,10 @@ module.exports = {
       exposes: {
         './Footer': './src/Footer.vue',
         './mountFooter': './src/mountFooter',
-        './Team': './src/views/Team.vue',
+        './team': './src/views/team.vue',
         './Ejemplo': './src/components/Ejemplo.vue',
         './mountTeam': './src/views/mountTeam',
+        './mountVue3': './src/mountVue3',
       },
       shared: require("./package.json").dependencies,
     }),

@@ -1,15 +1,11 @@
-import Home from "./views/Home.vue";
+import Feature from "host/Feature";
 import VistaEjemplo from "./views/VistaEjemplo.vue"
 import Doc from "./views/Doc.vue"
 export default [
     {
         path: "/",
-        component: Home,
-        name: 'home'
-      },
-      {
-        path: "/vistaejemplo",
-        component: VistaEjemplo,
+        component: Feature,
+        name: 'feature'
       },
       {
         path: '/doc/:casoDeUso',
