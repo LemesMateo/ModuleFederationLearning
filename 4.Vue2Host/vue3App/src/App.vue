@@ -1,22 +1,25 @@
 <template>
   <div class="mt-10 text-3xl mx-auto max-w-6xl">
-    <div>Name: vue3App</div>
-    <div>Framework: vue3</div>
-    <div>Language: JavaScript</div>
-    <div>CSS: Tailwind</div>
+    <div id='navbar'></div>
+    <div id='feature' ></div>
   </div>
   
   <Footer/>
 </template>
 
 <script>
-  import Footer from './Footer.vue'
-  //import Feature from 'host/Feature.vue'
-  //import mountNavbar from 'host/mountNavbar';
+  import Footer from './Footer.vue';
+  import mountFeature from 'host/mountFeature';
+  import navbarWrapper from 'reactApp/navbarWrapper';
   
   export default {
     components: {
       Footer
+    }, mounted (){
+      mountFeature('#feature');
+      navbarWrapper('navbar');
+
+
     }
   }
 </script>
